@@ -15,11 +15,15 @@ struct ActivityView: View {
         ScrollView{
             VStack(alignment: .leading){
                 Text(activity.title)
-                    .font(.title)
-                Text(activity.description)
+                    .font(.system(size: CGFloat(40.0), weight: .bold, design: .default))
+                HStack{
+                    Text("Description: ")
+                    Text(activity.description)
+                }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal)
         }
-        
     }
 }
 
